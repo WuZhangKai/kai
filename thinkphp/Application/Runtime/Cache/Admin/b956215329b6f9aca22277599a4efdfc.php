@@ -44,6 +44,8 @@
 <div id="wrapper">
 
     <!--navigation -->
+<?php
+ $navs = D("Menu")->getAdminMenus(); $index = 'index'; ?>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
@@ -63,7 +65,7 @@
        
         <li class="divider"></li>
         <li>
-          <a href="?m=admin&c=login&a=loginout"><i class="fa fa-fw fa-power-off"></i> 退出</a>
+          <a href="admin.php?c=login&a=loginout"><i class="fa fa-fw fa-power-off"></i> 退出</a>
         </li>
       </ul>
     </li>
@@ -71,13 +73,12 @@
   <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav side-nav nav_list">
-      <li >
-        <a href=""><i class="fa fa-fw fa-dashboard"></i> 首页</a>
+      <li <?php echo (getActive($index)); ?>>
+        <a href="admin.php"><i class="fa fa-fw fa-dashboard"></i> 首页</a>
       </li>
-      <li>
-        <a href="admin.php?c=menu"><i class="fa fa-fw fa-bar-chart-o"></i>菜单管理</a>
-      </li>
-
+      <?php if(is_array($navs)): $i = 0; $__LIST__ = $navs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?><li <?php echo (getActive($nav["c"])); ?>>
+        <a href="<?php echo (getAdminMenuUrl($nav)); ?>"><i class="fa fa-fw fa-bar-chart-o"></i><?php echo ($nav["name"]); ?></a>
+      </li><?php endforeach; endif; else: echo "" ;endif; ?>
     </ul>
   </div>
   <!-- /.navbar-collapse -->
@@ -94,7 +95,7 @@
 
                 <ol class="breadcrumb">
                     <li>
-                        <i class="fa fa-dashboard"></i>  <a href="/admin.php?c=menu">菜单管理</a>
+                        <i class="fa fa-dashboard"></i>  <a href="admin.php?c=menu">菜单管理</a>
                     </li>
                     <li class="active">
                         <i class="fa fa-table"></i><?php echo ($nav); ?>
@@ -104,16 +105,16 @@
         </div>
         <!-- /.row -->
         <div class="row">
-            <form action="/admin.php" method="get">
+            <form action="admin.php" method="get">
 
                 <div class="input-group">
                     <span class="input-group-addon">类型</span>
                     <select class="form-control" name="type">
                         <option value='' >请选择类型</option>
 
-                        <option value="1" >后台菜单</option>
-                        <option value="0" >前端导航</option>
-                    <lect>
+                        <option value="1" <?php if($type == 1): ?>selected="selected"<?php endif; ?>>后台菜单</option>
+                        <option value="0" <?php if($type == 0): ?>selected="selected"<?php endif; ?>>前端导航</option>
+                    <select>
                 </div>
 
                 <input type="hidden" name="c" value="menu"/>
@@ -146,13 +147,13 @@
                         </thead>
                         <tbody>
                         <?php if(is_array($menus)): $i = 0; $__LIST__ = $menus;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i;?><tr>
-                                <td><input size="4" type="text" name="" value=""/></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td><span class="glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id=""></span>    <a href="javascript:void(0)" attr-id="" id="singcms-delete"  attr-a="menu" attr-message="删除"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a></td>
+                                <td><input size="4" type="text" name="listorder[<?php echo ($menu["menu_id"]); ?>]" value="<?php echo ($menu["listorder"]); ?>"/></td>
+                                <td><?php echo ($menu["menu_id"]); ?></td>
+                                <td><?php echo ($menu["name"]); ?></td>
+                                <td><?php echo ($menu["m"]); ?></td>
+                                <td><?php echo (getMenuType($menu["type"])); ?></td>
+                                <td><?php echo (getStatus($menu["status"])); ?></td>
+                                <td><span class="glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="<?php echo ($menu["menu_id"]); ?>"></span>    <a href="javascript:void(0)" attr-id="<?php echo ($menu["menu_id"]); ?>" id="singcms-delete"  attr-a="menu" attr-message="删除"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a></td>
                             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
                         </tbody>
@@ -160,10 +161,12 @@
                     </form>
                     <nav>
                         <ul class="pagination">
-                            
+                          <?php echo ($pageRes); ?>  
                         </ul>
                     </nav>
-                    
+                    <div>
+        	  	  <button  id="button-listorder" type="button" class="btn btn-primary dropdown-toggle"    xpanded="false"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>排序 </button>
+ 	            </div> 
                 </div>
             </div>
 
@@ -191,7 +194,7 @@
 
     }
 </script>
-<script src="/thinkphp/Public/js/admin/common.js"></script>
+<script src="/thinkphp/Public/js/admin/common.js?ver=2"></script>
 
 
 

@@ -44,6 +44,8 @@
 <div id="wrapper">
 
     <!--navigation -->
+<?php
+ $navs = D("Menu")->getAdminMenus(); $index = 'index'; ?>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
@@ -63,7 +65,7 @@
        
         <li class="divider"></li>
         <li>
-          <a href="?m=admin&c=login&a=loginout"><i class="fa fa-fw fa-power-off"></i> 退出</a>
+          <a href="admin.php?c=login&a=loginout"><i class="fa fa-fw fa-power-off"></i> 退出</a>
         </li>
       </ul>
     </li>
@@ -71,13 +73,12 @@
   <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav side-nav nav_list">
-      <li >
-        <a href=""><i class="fa fa-fw fa-dashboard"></i> 首页</a>
+      <li <?php echo (getActive($index)); ?>>
+        <a href="admin.php"><i class="fa fa-fw fa-dashboard"></i> 首页</a>
       </li>
-      <li>
-        <a href="admin.php?c=menu"><i class="fa fa-fw fa-bar-chart-o"></i>菜单管理</a>
-      </li>
-
+      <?php if(is_array($navs)): $i = 0; $__LIST__ = $navs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?><li <?php echo (getActive($nav["c"])); ?>>
+        <a href="<?php echo (getAdminMenuUrl($nav)); ?>"><i class="fa fa-fw fa-bar-chart-o"></i><?php echo ($nav["name"]); ?></a>
+      </li><?php endforeach; endif; else: echo "" ;endif; ?>
     </ul>
   </div>
   <!-- /.navbar-collapse -->
@@ -207,7 +208,7 @@
 </div>
     <!-- /#wrapper -->
 
-<script src="/thinkphp/Public/js/admin/common.js"></script>
+<script src="/thinkphp/Public/js/admin/common.js?ver=2"></script>
 
 
 
