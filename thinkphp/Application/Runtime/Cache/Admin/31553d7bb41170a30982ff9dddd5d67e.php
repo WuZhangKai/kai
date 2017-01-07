@@ -197,7 +197,7 @@
         'jump_url' : 'admin.php?c=menu',
     }
 </script>
-<script src="/thinkphp/Public/js/admin/common.js?ver=2"></script>
+<script src="/thinkphp/Public/js/admin/common.js?ver=2.4"></script>
 
 
 

@@ -125,7 +125,7 @@
               <div class="col-sm-5">
                 <input id="file_upload"  type="file" multiple="true" >
                 <img style="display: none" id="upload_org_code_img" src="<?php echo ($news["thumb"]); ?>" width="150" height="150">
-                <input id="file_upload_image" name="thumb" type="hidden" multiple="true" value="" value="<?php echo ($news["thumb"]); ?>">
+                <input id="file_upload_image" name="thumb" type="hidden" multiple="true"  value="<?php echo ($news["thumb"]); ?>">
               </div>
             </div>
             <div class="form-group">
@@ -221,7 +221,7 @@
 		$("#upload_org_code_img").show();
 	}
 </script>
-<script src="/thinkphp/Public/js/admin/common.js?ver=2"></script>
+<script src="/thinkphp/Public/js/admin/common.js?ver=2.3"></script>
 
 
 

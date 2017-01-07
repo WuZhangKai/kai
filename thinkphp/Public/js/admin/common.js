@@ -43,7 +43,7 @@ $('.singcms-table #singcms-delete').on('click',function(){
 	var a = $(this).attr("attr-a");
 	var message = $(this).attr("attr-message");
 	var url = SCOPE.set_status_url;
-
+	alert(url);
 	data = {};
 	data['id'] = id
 	data['status'] = -1;
@@ -82,6 +82,7 @@ function toDelete(url,data){
 $('#button-listorder').click(function(){
 	//获取 listorder内容
 	var data = $("#singcms-listorder").serializeArray();
+
 	postData = {};
 	$(data).each(function(i){
 		postData[this.name] = this.value;
@@ -124,3 +125,34 @@ $('.singcms-table #singcms-on-off').on('click',function(){
 		},
 	});
 });
+
+/**
+ * 推送相关
+ */
+$("#singcms-push").click(function(){
+	var id = $("#select-push").get(0).selectedIndex;
+	if(id==0){
+		return dialog.error("请选择推荐位");
+	}
+	id = $("#select-push").val();
+	push = {};
+	postData = {};
+	$("input[name='pushcheck']:checked").each(function(i){
+		push[i] = $(this).val();	
+	});
+	
+	postData['push'] = push;
+	postData['position_id'] = id;
+	var url = SCOPE.push_url;
+	$.post(url,postData,function(result){
+		if(result.status == 1){
+			//TO DO
+			return dialog.success(result.message,result['data']['jump_url']);
+		}	
+		if(result.status == 0){
+			//TO DO
+			return dialog.error(result.message);
+		}
+	},"json");
+});
+

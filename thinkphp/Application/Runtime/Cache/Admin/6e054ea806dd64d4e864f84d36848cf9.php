@@ -95,10 +95,10 @@
 
                 <ol class="breadcrumb">
                     <li>
-                        <i class="fa fa-dashboard"></i>  <a href="admin.php?c=menu">菜单管理</a>
+                        <i class="fa fa-dashboard"></i>  <a href="/admin.php?c=menu">推荐位管理</a>
                     </li>
                     <li class="active">
-                        <i class="fa fa-edit"></i> 编辑
+                        <i class="fa fa-edit"></i> 修改 
                     </li>
                 </ol>
             </div>
@@ -110,67 +110,32 @@
 
                 <form class="form-horizontal" id="singcms-form">
                     <div class="form-group">
-                        <label for="inputname" class="col-sm-2 control-label">菜单名:</label>
+                        <label for="inputname" class="col-sm-2 control-label">推荐位名称:</label>
                         <div class="col-sm-5">
-                            <input type="text" name="name" class="form-control" id="inputname" placeholder="请填写菜单名" value="<?php echo ($menu["name"]); ?>">
+                            <input type="text" name="name" class="form-control" id="inputname" value="<?php echo ($position["name"]); ?>" placeholder="请填写推荐位名称">
                         </div>
                     </div>
-                    <!--<div class="form-group">
-                        <label for="inputname" class="col-sm-2 control-label">父类菜单ID:</label>
-                        <div class="col-sm-5">
-                            <select class="form-control" name="parentid">
-                                <option value="0">一级菜单</option>
-                                <?php if(is_array($menus)): $i = 0; $__LIST__ = $menus;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$parent): $mod = ($i % 2 );++$i;?><option value="<?php echo ($parent["menu_id"]); ?>"><?php echo ($parent["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-                            </select>
-                        </div>
-                    </div>-->
-                    <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-2 control-label">菜单类型:</label>
-                        <div class="col-sm-5">
-                            <input type="radio" name="type" id="optionsRadiosInline1" value="1" <?php if($menu["type"] == 1): ?>checked<?php endif; ?>> 后台菜单
-                            <input type="radio" name="type" id="optionsRadiosInline2" value="0" <?php if($menu["type"] == 0): ?>checked<?php endif; ?>> 前端栏目
-                        </div>
+		
+		   <div class="form-group">
+		      <label for="inputPassword3" class="col-sm-2 control-label">描述:</label>
+		      <div class="col-sm-5">
+			<textarea class="input js-editor" id="editor_singcms" name="description" rows="10" ><?php echo ($position["description"]); ?></textarea>
+		      </div>
+		    </div>
 
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-2 control-label">模块名:</label>
-                        <div class="col-sm-5">
-                            <input type="text" class="form-control" name="m" id="inputPassword3" placeholder="模块名如admin" value="<?php echo ($menu["m"]); ?>">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-2 control-label">控制器:</label>
-                        <div class="col-sm-5">
-                            <input type="text" class="form-control" name="c" id="inputPassword3" placeholder="控制器如index" value="<?php echo ($menu["c"]); ?>">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-2 control-label">方法:</label>
-                        <div class="col-sm-5">
-                            <input type="text" class="form-control" name="f" id="inputPassword3" placeholder="方法名如index" value="<?php echo ($menu["f"]); ?>">
-                        </div>
-                    </div>
-                    <!--<div class="form-group">
-                        <label for="inputPassword3" class="col-sm-2 control-label">是否为前台菜单:</label>
-                        <div class="col-sm-5">
-                            <input type="radio" name="type" id="optionsRadiosInline1" value="0" checked> 否
-                            <input type="radio" name="type" id="optionsRadiosInline2" value="1"> 是
-                        </div>
-
-                    </div>-->
-
-                    <div class="form-group">
+                     <div class="form-group">
                         <label for="inputPassword3" class="col-sm-2 control-label">状态:</label>
                         <div class="col-sm-5">
-                            <input type="radio" name="status" id="optionsRadiosInline1" value="1" <?php if($menu["status"] == 1): ?>checked<?php endif; ?>> 开启
-                            <input type="radio" name="status" id="optionsRadiosInline2" value="0" <?php if($menu["status"] == 0): ?>checked<?php endif; ?>> 关闭
+                            <input type="radio" name="status" id="optionsRadiosInline1" value="1" <?php if($position["status"] == 1): ?>checked<?php endif; ?>> 开启
+                            <input type="radio" name="status" id="optionsRadiosInline2" value="0" <?php if($position["status"] == 0): ?>checked<?php endif; ?>> 关闭
                         </div>
 
                     </div>
-		    <input type="hidden" name="menu_id" value="<?php echo ($menu["menu_id"]); ?>"/>
+		
+		    <input type="hidden" value="<?php echo ($position["id"]); ?>" name="id"/>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <button type="button" class="btn btn-default" id="singcms-button-submit">更新</button>
+                            <button type="button" class="btn btn-default" id="singcms-button-submit">提交</button>
                         </div>
                     </div>
                 </form>
@@ -193,11 +158,11 @@
 <script>
 
     var SCOPE = {
-        'save_url' : 'admin.php?c=menu&a=add',
-        'jump_url' : 'admin.php?c=menu',
+        'save_url' : '/thinkphp/admin.php?c=position&a=add',
+        'jump_url' : '/thinkphp/admin.php?c=position',
     }
 </script>
-<script src="/thinkphp/Public/js/admin/common.js?ver=2.7"></script>
+<script src="/thinkphp/Public/js/admin/common.js?ver=2.3"></script>
 
 
 
