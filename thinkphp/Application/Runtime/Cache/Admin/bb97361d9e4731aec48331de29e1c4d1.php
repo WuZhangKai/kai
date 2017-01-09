@@ -40,6 +40,7 @@
 
 
 <body>
+
 <div id="wrapper">
 
     <!--navigation -->
@@ -83,105 +84,78 @@
   <!-- /.navbar-collapse -->
 </nav>
 
-<div id="page-wrapper">
 
-	<div class="container-fluid">
+    <div id="page-wrapper">
 
-		<!-- Page Heading -->
-		<div class="row">
-			<div class="col-lg-12">
+    <div class="container-fluid">
 
-				<ol class="breadcrumb">
-					<li>
-						<i class="fa fa-dashboard"></i>  <a href="/admin.php?c=positioncontent">推荐位内容管理</a>
-					</li>
-					<li class="active">
-						<i class="fa fa-edit"></i> 添加推荐位内容
-					</li>
-				</ol>
-			</div>
-		</div>
-		<!-- /.row -->
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
 
-		<div class="row">
-			<div class="col-lg-6">
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-edit"></i> 基本配置
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
 
-				<form class="form-horizontal" id="singcms-form">
-					<div class="form-group">
-						<label for="inputname" class="col-sm-2 control-label">标题:</label>
-						<div class="col-sm-5">
-							<input type="text" name="title" class="form-control" id="inputname" placeholder="请填写标题">
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="inputname" class="col-sm-2 control-label">选择推荐位:</label>
-						<div class="col-sm-5">
-							<select class="form-control" name="position_id">
-								<?php if(is_array($positions)): foreach($positions as $key=>$position): ?><option value="<?php echo ($position["id"]); ?>"><?php echo ($position["name"]); ?></option><?php endforeach; endif; ?>
-							</select>
-						</div>
-					</div>
+        <div class="row">
+            <div class="col-lg-6">
 
-					<div class="form-group">
-						<label for="inputname" class="col-sm-2 control-label">缩图:</label>
-						<div class="col-sm-5">
-							<input id="file_upload"  type="file" multiple="true" >
-							<img style="display: none" id="upload_org_code_img" src="" width="150" height="150">
-							<input id="file_upload_image" name="thumb" type="hidden" multiple="true" value="">
-						</div>
-					</div>
+                <form class="form-horizontal" id="singcms-form">
+                    <div class="form-group">
+                        <label for="inputname" class="col-sm-2 control-label">站点标题:</label>
+                        <div class="col-sm-5">
+                            <input type="text" name="title" class="form-control" id="inputname" placeholder="请填写站点标题" value="<?php echo ($vo["title"]); ?>"}>
+                        </div>
+                    </div>
 
-					<div class="form-group">
-						<label for="inputPassword3" class="col-sm-2 control-label">url:</label>
-						<div class="col-sm-5">
-							<input type="text" class="form-control" name="url" id="inputPassword3" placeholder="请url地址">
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="inputname" class="col-sm-2 control-label">文章id:</label>
-						<div class="col-sm-5">
-							<input type="text" name="news_id" class="form-control" id="inputname" placeholder="如果和文章无关联的可以不添加文章id">
-						</div>
-					</div>
-					<div class="form-group">
-					<label for="inputPassword3" class="col-sm-2 control-label">状态:</label>
-					<div class="col-sm-5">
-						<input type="radio" name="status" id="optionsRadiosInline1" value="1" checked> 开启
-						<input type="radio" name="status" id="optionsRadiosInline2" value="0"> 关闭
-					</div>
+  		<div class="form-group">
+                        <label for="inputname" class="col-sm-2 control-label">站点关键词:</label>
+                        <div class="col-sm-5">
+                            <input type="text" name="keywords" class="form-control" id="inputname" placeholder="请填写站点关键词" value="<?php echo ($vo["keywords"]); ?>">
+                        </div>
+                    </div>
 
-				</div>
+		   <div class="form-group">
+		      <label for="inputPassword3" class="col-sm-2 control-label">站点描述:</label>
+		      <div class="col-sm-5">
+			<textarea class="input js-editor" id="editor_singcms" name="description" rows="10"><?php echo ($vo["description"]); ?></textarea>
+		      </div>
+		    </div>
 
-					<div class="form-group">
-						<div class="col-sm-offset-2 col-sm-10">
-							<button type="button" class="btn btn-default" id="singcms-button-submit">提交</button>
-						</div>
-					</div>
-				</form>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="button" class="btn btn-default" id="singcms-button-submit">提交</button>
+                        </div>
+                    </div>
+                </form>
 
 
-			</div>
+            </div>
 
-		</div>
-		<!-- /.row -->
+        </div>
+        <!-- /.row -->
 
-	</div>
-	<!-- /.container-fluid -->
+    </div>
+    <!-- /.container-fluid -->
 
 </div>
 <!-- /#page-wrapper -->
+
 </div>
-<script>
-	var SCOPE = {
-		'save_url' : 'admin.php?c=positioncontent&a=add',
-		'jump_url' : 'admin.php?c=positioncontent&a=index',
-		'ajax_upload_image_url' : 'admin.php?c=image&a=ajaxuploadimage',
-		'ajax_upload_swf' : '/thinkphp/Public/js/party/uploadify.swf'
-	};
-</script>
 <!-- /#wrapper -->
-<!--<script type="text/javascript" src="/thinkphp/Public/js/admin/form.js"></script>-->
-<script src="/thinkphp/Public/js/admin/image.js"></script>
+<!-- Morris Charts JavaScript -->
+<script>
+
+    var SCOPE = {
+        'save_url' : '/thinkphp/admin.php?c=basic&a=add',
+        'jump_url' : '/thinkphp/admin.php?c=basic',
+    }
+</script>
 <script src="/thinkphp/Public/js/admin/common.js?ver=2.9"></script>
 
 

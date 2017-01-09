@@ -31,7 +31,7 @@
                         <span class="input-group-addon">推荐位</span>
                         <select class="form-control" name="position_id">
 			    <foreach name="positions" item="position">
-                                <option value="{$position.id}" <if condition="$position.id eq $position_id">selected="selected"</if>>{$position.name}</option>
+                                <option value="{$position.id}" <if condition="$position['id'] eq $position_id">selected="selected"</if>>{$position.name}</option>
 			    </foreach>
                         </select>
                     </div>
@@ -75,11 +75,11 @@
                                 <td>{$vo.create_time|date="y-m-d H:i",###}</td>
                                 <td>{$vo.thumb|isThumb}</td>
                                 <td>
-                                    <span  attr-status="0"  attr-id="" class="sing_cursor singcms-on-off" id="singcms-on-off" >{$vo.status|getStatus}</span>
+                                    <span  attr-status="<if condition="$vo['status'] eq 1">0<else/>1</if>"  attr-id="{$vo.id}" class="sing_cursor singcms-on-off" id="singcms-on-off" >{$vo.status|getStatus}</span>
                                 </td>
                                 <td>
-                                    <span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="" ></span>
-                                    <a href="javascript:void(0)" id="singcms-delete"  attr-id=""  attr-message="删除">
+                                    <span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="{$vo.id}" ></span>
+                                    <a href="javascript:void(0)" id="singcms-delete"  attr-id="{$vo.id}"  attr-message="删除">
                                         <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
                                     </a>
                                 </td>
@@ -87,7 +87,7 @@
 			</volist>
                         </tbody>
                     </table>
-                    </from>
+                    </form>
                     <div>
                         <button  id="button-listorder" type="button" class="btn btn-primary dropdown-toggle" ><span class="glyphicon glyphicon-resize-vertical" aria-hidden="true"></span>更新排序</button>
                     </div>
@@ -110,9 +110,9 @@
 <script>
     var SCOPE = {
         'edit_url' : 'admin.php?c=positioncontent&a=edit',
-        'set_status_url' : '/admin.php?c=positioncontent&a=setStatus',
+        'set_status_url' : 'admin.php?c=positioncontent&a=setStatus',
         'add_url' : 'admin.php?c=positioncontent&a=add',
-        'listorder_url' : '/admin.php?c=positioncontent&a=listorder',
+        'listorder_url' : 'admin.php?c=positioncontent&a=listorder',
     }
 
 </script>

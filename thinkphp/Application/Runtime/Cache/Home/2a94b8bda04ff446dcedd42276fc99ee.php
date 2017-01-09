@@ -1,10 +1,14 @@
-<!doctype html>
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<?php
+ $config = D("Basic")->select(); $navs = D("Menu")->getBarMenus(); ?>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>sing资讯</title>
-  <link rel="stylesheet" href="/Public/css/bootstrap.min.css" type="text/css" />
-  <link rel="stylesheet" href="/Public/css/home/main.css" type="text/css" />
+  <title><?php echo ($config["title"]); ?></title>
+  <meta name="keywords" content="<?php echo ($config["keywords"]); ?>"/>
+  <meta name="description" content="<?php echo ($config["description"]); ?>"/>
+  <link rel="stylesheet" href="/thinkphp/Public/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="/thinkphp/Public/css/home/main.css" type="text/css" />
 </head>
 <body>
 <header id="header">
@@ -12,38 +16,30 @@
     <div class="container">
       <div class="navbar-header">
         <a href="">
-          <img src="/Public/images/logo.png" alt="">
+          <img src="/thinkphp/Public/images/logo.png" alt="">
         </a>
       </div>
       <ul class="nav navbar-nav navbar-left">
-        <li><a href="" class="curr">首页</a></li>
-        <li><a href="">体育</a></li>
-        <li><a href="">科技</a></li>
-        <li><a href="">人文</a></li>
-        <li><a href="">汽车</a></li>
+        <li><a href="" <?php if($result['catid'] == 0): ?>class="curr"<?php endif; ?>>首页</a></li>
+	<?php if(is_array($navs)): foreach($navs as $key=>$vo): ?><li><a href="index.php?c=cat$id=<?php echo ($vo["menu_id"]); ?>" <?php if($vo['menu_id'] == $result['catid']): ?>class="curr"<?php endif; ?>><?php echo ($vo["name"]); ?></a></li><?php endforeach; endif; ?>
       </ul>
     </div>
   </div>
 </header>
+
 <section>
   <div class="container">
     <div class="row">
       <div class="col-sm-9 col-md-9">
         <div class="banner">
           <div class="banner-left">
-            <img src="/Public/images/banner.jpg" alt="">
+            <a target="_blank"  href="index.php?c=detail$id=<?php echo ($result['topPicNews'][0]['news_idg']); ?>"><img src="<?php echo ($result['topPicNews'][0]['thumb']); ?>" alt=""></a>
           </div>
           <div class="banner-right">
             <ul>
-              <li>
-                <img src="/Public/images/img1.jpg" alt="">
-              </li>
-              <li>
-                <img src="/Public/images/img2.jpg" alt="">
-              </li>
-              <li>
-                <img src="/Public/images/img3.jpg" alt="">
-              </li>
+	    <?php if(is_array($$result['topSmallNews'])): $i = 0; $__LIST__ = $$result['topSmallNews'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
+               <a href="index.php?c=detail$id=<?php echo ($vo["news_id"]); ?>"> <img src="<?php echo ($vo["thumb"]); ?>" alt=""></a>
+              </li><?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
           </div>
         </div>
@@ -98,7 +94,8 @@
           </dl>
         </div>
       </div>
-      <div class="col-sm-3 col-md-3">
+	<!--网站右侧信息-->
+	      <div class="col-sm-3 col-md-3">
         <div class="right-title">
           <h3>文章排行</h3>
           <span>TOP ARTICLES</span>
@@ -129,8 +126,9 @@
           <img src="/Public/images/img6.jpg" alt="">
         </div>
       </div>
-    </div>
+
+   </div>
   </div>
 </section>
 </body>
-</html> 
+</html>

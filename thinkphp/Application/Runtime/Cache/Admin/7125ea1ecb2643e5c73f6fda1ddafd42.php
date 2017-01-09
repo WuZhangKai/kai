@@ -96,7 +96,7 @@
 						<i class="fa fa-dashboard"></i>  <a href="/admin.php?c=positioncontent">推荐位内容管理</a>
 					</li>
 					<li class="active">
-						<i class="fa fa-edit"></i> 添加推荐位内容
+						<i class="fa fa-edit"></i> 修改推荐位内容
 					</li>
 				</ol>
 			</div>
@@ -110,14 +110,14 @@
 					<div class="form-group">
 						<label for="inputname" class="col-sm-2 control-label">标题:</label>
 						<div class="col-sm-5">
-							<input type="text" name="title" class="form-control" id="inputname" placeholder="请填写标题">
+							<input type="text" name="title" class="form-control" id="inputname" placeholder="请填写标题" value="<?php echo ($vo["title"]); ?>">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="inputname" class="col-sm-2 control-label">选择推荐位:</label>
 						<div class="col-sm-5">
 							<select class="form-control" name="position_id">
-								<?php if(is_array($positions)): foreach($positions as $key=>$position): ?><option value="<?php echo ($position["id"]); ?>"><?php echo ($position["name"]); ?></option><?php endforeach; endif; ?>
+								<?php if(is_array($positions)): foreach($positions as $key=>$position): ?><option value="<?php echo ($position["id"]); ?>" <?php if($position['id'] == $vo['position_id']): ?>selected="selected"<?php endif; ?>><?php echo ($position["name"]); ?></option><?php endforeach; endif; ?>
 							</select>
 						</div>
 					</div>
@@ -126,30 +126,30 @@
 						<label for="inputname" class="col-sm-2 control-label">缩图:</label>
 						<div class="col-sm-5">
 							<input id="file_upload"  type="file" multiple="true" >
-							<img style="display: none" id="upload_org_code_img" src="" width="150" height="150">
-							<input id="file_upload_image" name="thumb" type="hidden" multiple="true" value="">
+							<img style="display: none" id="upload_org_code_img" src="<?php echo ($vo["thumb"]); ?>" width="150" height="150">
+							<input id="file_upload_image" name="thumb" type="hidden" multiple="true" value="<?php echo ($vo["thumb"]); ?>">
 						</div>
 					</div>
 
 					<div class="form-group">
 						<label for="inputPassword3" class="col-sm-2 control-label">url:</label>
 						<div class="col-sm-5">
-							<input type="text" class="form-control" name="url" id="inputPassword3" placeholder="请url地址">
+							<input type="text" class="form-control" name="url" id="inputPassword3" placeholder="请url地址" value="<?php echo ($vo["url"]); ?>">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="inputname" class="col-sm-2 control-label">文章id:</label>
 						<div class="col-sm-5">
-							<input type="text" name="news_id" class="form-control" id="inputname" placeholder="如果和文章无关联的可以不添加文章id">
+							<input type="text" name="news_id" class="form-control" id="inputname" placeholder="如果和文章无关联的可以不添加文章id" value="<?php echo ($vo["news_id"]); ?>">
 						</div>
 					</div>
 					<div class="form-group">
 					<label for="inputPassword3" class="col-sm-2 control-label">状态:</label>
 					<div class="col-sm-5">
-						<input type="radio" name="status" id="optionsRadiosInline1" value="1" checked> 开启
-						<input type="radio" name="status" id="optionsRadiosInline2" value="0"> 关闭
+						<input type="radio" name="status" id="optionsRadiosInline1" value="1" <?php if($vo["status"] == 1): ?>checked<?php endif; ?>> 开启
+						<input type="radio" name="status" id="optionsRadiosInline2" value="0" <?php if($vo["status"] == 0): ?>checked<?php endif; ?>> 关闭
 					</div>
-
+					<input type="hidden" name="id" value="<?php echo ($vo["id"]); ?>">
 				</div>
 
 					<div class="form-group">
@@ -178,6 +178,11 @@
 		'ajax_upload_image_url' : 'admin.php?c=image&a=ajaxuploadimage',
 		'ajax_upload_swf' : '/thinkphp/Public/js/party/uploadify.swf'
 	};
+	
+	var thumb = "<?php echo ($vo["thumb"]); ?>";
+	if(thumb){
+		$("#upload_org_code_img").show();	
+	}	
 </script>
 <!-- /#wrapper -->
 <!--<script type="text/javascript" src="/thinkphp/Public/js/admin/form.js"></script>-->

@@ -110,7 +110,7 @@
                     <div class="input-group">
                         <span class="input-group-addon">推荐位</span>
                         <select class="form-control" name="position_id">
-			    <?php if(is_array($positions)): foreach($positions as $key=>$position): ?><option value="<?php echo ($position["id"]); ?>" <?php if($position["id"] == $position_id): ?>selected="selected"<?php endif; ?>><?php echo ($position["name"]); ?></option><?php endforeach; endif; ?>
+			    <?php if(is_array($positions)): foreach($positions as $key=>$position): ?><option value="<?php echo ($position["id"]); ?>" <?php if($position['id'] == $position_id): ?>selected="selected"<?php endif; ?>><?php echo ($position["name"]); ?></option><?php endforeach; endif; ?>
                         </select>
                     </div>
                 </div>
@@ -152,18 +152,18 @@
                                 <td><?php echo (date("y-m-d H:i",$vo["create_time"])); ?></td>
                                 <td><?php echo (isThumb($vo["thumb"])); ?></td>
                                 <td>
-                                    <span  attr-status="0"  attr-id="" class="sing_cursor singcms-on-off" id="singcms-on-off" ><?php echo (getStatus($vo["status"])); ?></span>
+                                    <span  attr-status="<?php if($vo['status'] == 1): ?>0<?php else: ?>1<?php endif; ?>"  attr-id="<?php echo ($vo["id"]); ?>" class="sing_cursor singcms-on-off" id="singcms-on-off" ><?php echo (getStatus($vo["status"])); ?></span>
                                 </td>
                                 <td>
-                                    <span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="" ></span>
-                                    <a href="javascript:void(0)" id="singcms-delete"  attr-id=""  attr-message="删除">
+                                    <span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="<?php echo ($vo["id"]); ?>" ></span>
+                                    <a href="javascript:void(0)" id="singcms-delete"  attr-id="<?php echo ($vo["id"]); ?>"  attr-message="删除">
                                         <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
                                     </a>
                                 </td>
                             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                         </tbody>
                     </table>
-                    </from>
+                    </form>
                     <div>
                         <button  id="button-listorder" type="button" class="btn btn-primary dropdown-toggle" ><span class="glyphicon glyphicon-resize-vertical" aria-hidden="true"></span>更新排序</button>
                     </div>
@@ -186,9 +186,9 @@
 <script>
     var SCOPE = {
         'edit_url' : 'admin.php?c=positioncontent&a=edit',
-        'set_status_url' : '/admin.php?c=positioncontent&a=setStatus',
+        'set_status_url' : 'admin.php?c=positioncontent&a=setStatus',
         'add_url' : 'admin.php?c=positioncontent&a=add',
-        'listorder_url' : '/admin.php?c=positioncontent&a=listorder',
+        'listorder_url' : 'admin.php?c=positioncontent&a=listorder',
     }
 
 </script>

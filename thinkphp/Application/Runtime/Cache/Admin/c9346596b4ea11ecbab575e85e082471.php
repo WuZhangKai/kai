@@ -221,7 +221,7 @@
 		$("#upload_org_code_img").show();
 	}
 </script>
-<script src="/thinkphp/Public/js/admin/common.js?ver=2.3"></script>
+<script src="/thinkphp/Public/js/admin/common.js?ver=2.9"></script>
 
 
 

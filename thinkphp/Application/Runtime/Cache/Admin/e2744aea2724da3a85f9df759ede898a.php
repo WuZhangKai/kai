@@ -215,7 +215,7 @@
     });
   });
 </script>
-<script src="/thinkphp/Public/js/admin/common.js?ver=2.7"></script>
+<script src="/thinkphp/Public/js/admin/common.js?ver=2.9"></script>
 
 
 
