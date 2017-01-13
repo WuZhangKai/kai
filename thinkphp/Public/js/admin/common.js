@@ -17,6 +17,7 @@ $("#singcms-button-submit").click(function(){
 	//将获取到的数据post给服务器
 	url = SCOPE.save_url;
 	jump_url = SCOPE.jump_url;
+	console.log(postData);
 	$.post(url,postData,function(result){
 		if(result.status == 1){
 			//成功

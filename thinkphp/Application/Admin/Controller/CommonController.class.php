@@ -46,6 +46,5 @@ class CommonController extends Controller {
 		return false;
 	}
 
-	
 
 }

@@ -156,7 +156,7 @@
         'jump_url' : '/thinkphp/admin.php?c=basic',
     }
 </script>
-<script src="/thinkphp/Public/js/admin/common.js?ver=2.9"></script>
+<script src="/thinkphp/Public/js/admin/common.js?ver=2.91"></script>
 
 
 

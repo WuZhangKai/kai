@@ -95,5 +95,25 @@ class NewsModel extends Model{
 		return $this->_db->where($data)->select();
 
         }
+	
+	 public function select($data = array(),$limit=0){
+
+                if($data['title']){
+                        $data['title'] = array('like','%'.$data['title'].'%');
+                }
+                $this->_db->where($data)->order('listorder desc ,news_id desc');
+                if($limit){
+                        $this->_db->limit($limit);
+                }
+                $list = $this->_db->select();
+
+                return $list;
+        }
+
+	public function getRank($data = array(),$limit = 100){
+		$list = $this->_db->where($data)->order('count desc,news_id desc')->select();
+		return $list;
+	}	
+
 }
 

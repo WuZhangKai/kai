@@ -161,7 +161,7 @@
         'jump_url' : '/thinkphp/admin.php?c=position',
     }
 </script>
-<script src="/thinkphp/Public/js/admin/common.js?ver=2.7"></script>
+<script src="/thinkphp/Public/js/admin/common.js?ver=2.91"></script>
 
 
 
