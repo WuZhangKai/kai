@@ -1,0 +1,24 @@
+[ 2017-01-14T15:39:37+08:00 ] 192.168.1.116 /thinkphp/index.php/sff
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+ERR: 无法加载模块:Sff
+
+[ 2017-01-14T15:39:42+08:00 ] 192.168.1.116 /thinkphp/index.php/index.php?c=cat&id=9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+ERR: 无法加载模块:Index
+
+[ 2017-01-14T15:39:48+08:00 ] 192.168.1.116 /thinkphp/index.php/index.php?c=cat&id=9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+ERR: 无法加载模块:Index
+
+[ 2017-01-14T15:40:33+08:00 ] 192.168.1.116 /thinkphp/index.php/index.php?c=cat&id=9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+ERR: 无法加载模块:Index
+

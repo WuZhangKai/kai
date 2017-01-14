@@ -1,0 +1,42 @@
+<include file="Index/header" />
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-9">
+        <div class="banner">
+          <div class="banner-left">
+            <a target="_blank"  href="index.php?c=detail&id={$result['topPicNews'][0]['news_idg']}"><img src="{$result['topPicNews'][0]['thumb']}" alt=""></a>
+          </div>
+          <div class="banner-right">
+            <ul>
+	    <volist name="result['topSmallNews']" id ="vo">
+              <li>
+               <a href="index.php?c=detail&id={$vo.news_id}"> <img src="{$vo.thumb}" alt=""></a>
+              </li>
+	    </volist>
+            </ul>
+          </div>
+        </div>
+        <div class="news-list">
+	<volist name="result['listNews']" id="vo">
+            <dt><a href="index.php?c=detail&id={$vo.news_id}">{$vo.title}</a></dt>
+            <dd class="news-img">
+              <img src="" alt="{$vo.title}">
+            </dd>
+            <dd class="news-intro">
+		{$vo.description}
+            </dd>
+            <dd class="news-info">
+              {$vo.keywords} <span>{$vo.create_time|date="Y-m-d H:i:s",###}</span> 阅读(0)
+            </dd>
+          </dl>
+	</volist>
+        </div>
+      </div>
+	<!--网站右侧信息-->
+	<include file="Index/right"/>
+   </div>
+  </div>
+</section>
+</body>
+</html> 
