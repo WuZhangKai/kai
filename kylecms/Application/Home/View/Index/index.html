@@ -27,7 +27,7 @@
 		{$vo.description}
             </dd>
             <dd class="news-info">
-              {$vo.keywords} <span>{$vo.create_time|date="Y-m-d H:i:s",###}</span> 阅读(0)
+              {$vo.keywords} <span>{$vo.create_time|date="Y-m-d H:i:s",###}</span> 阅读(<i news-id="{$vo.news_id}" class="news_count node-{$vo.news_id}">{$vo.count}</i>)
             </dd>
           </dl>
 	</volist>
@@ -39,4 +39,6 @@
   </div>
 </section>
 </body>
+<script src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+<script src="__PUBLIC__/js/count.js"></script>
 </html> 

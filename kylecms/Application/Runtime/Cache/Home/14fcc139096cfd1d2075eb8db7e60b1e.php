@@ -7,8 +7,8 @@
   <title><?php echo ($config["title"]); ?></title>
   <meta name="keywords" content="<?php echo ($config["keywords"]); ?>"/>
   <meta name="description" content="<?php echo ($config["description"]); ?>"/>
-  <link rel="stylesheet" href="/thinkphp/Public/css/bootstrap.min.css" type="text/css" />
-  <link rel="stylesheet" href="/thinkphp/Public/css/home/main.css" type="text/css" />
+  <link rel="stylesheet" href="/kylecms/Public/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="/kylecms/Public/css/home/main.css" type="text/css" />
 </head>
 <body>
 <header id="header">
@@ -16,7 +16,7 @@
     <div class="container">
       <div class="navbar-header">
         <a href="">
-          <img src="/thinkphp/Public/images/logo.png" alt="">
+          <img src="/kylecms/Public/images/logo.png" alt="">
         </a>
       </div>
       <ul class="nav navbar-nav navbar-left">
@@ -32,9 +32,9 @@
 				<div class="col-sm-9 col-md-9">
 					<div class="news-list">
 						<?php if(is_array($result['listNews'])): $i = 0; $__LIST__ = $result['listNews'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><dl>
-								<dt><a href="/thinkphp/index.php?c=detail&id=<?php echo ($vo["news_id"]); ?>"><?php echo ($vo["title"]); ?></a></dt>
+								<dt><a href="/kylecms/index.php?c=detail&id=<?php echo ($vo["news_id"]); ?>"><?php echo ($vo["title"]); ?></a></dt>
 								<dd class="news-img">
-									<a href="/thinkphp/index.php?c=detail&id=<?php echo ($vo["news_id"]); ?>"><img src=""></a>
+									<a href="/kylecms/index.php?c=detail&id=<?php echo ($vo["news_id"]); ?>"><img src=""></a>
 								</dd>
 								<dd class="news-intro">
 									<?php echo ($vo["description"]); ?>

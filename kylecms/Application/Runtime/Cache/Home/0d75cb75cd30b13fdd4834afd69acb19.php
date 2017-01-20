@@ -7,8 +7,8 @@
   <title><?php echo ($config["title"]); ?></title>
   <meta name="keywords" content="<?php echo ($config["keywords"]); ?>"/>
   <meta name="description" content="<?php echo ($config["description"]); ?>"/>
-  <link rel="stylesheet" href="/thinkphp/Public/css/bootstrap.min.css" type="text/css" />
-  <link rel="stylesheet" href="/thinkphp/Public/css/home/main.css" type="text/css" />
+  <link rel="stylesheet" href="/kylecms/Public/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="/kylecms/Public/css/home/main.css" type="text/css" />
 </head>
 <body>
 <header id="header">
@@ -16,7 +16,7 @@
     <div class="container">
       <div class="navbar-header">
         <a href="">
-          <img src="/thinkphp/Public/images/logo.png" alt="">
+          <img src="/kylecms/Public/images/logo.png" alt="">
         </a>
       </div>
       <ul class="nav navbar-nav navbar-left">
@@ -58,7 +58,7 @@
 		</div>
 	<section>
 </body>
-<script src="/thinkphp/Public/js/jquery-1.10.2.min.js"></script>
+<script src="__PULIC__/js/jquery-1.10.2.min.js"></script>
 <script>
 
 </script>

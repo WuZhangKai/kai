@@ -88,7 +88,9 @@
                       <a href="javascript:void(0)" id="singcms-delete"  attr-id="{$new.news_id}"  attr-message="删除">
                         <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
                       </a>
-
+			<a href="javascript:void(0)" target="_blank" id="singcms-view" attr-id="{$new.news_id}">
+			<span class="glyphicon glyphicon-eye-open"></span>
+			</a>
                     </td>
                   </tr>
                </volist> 
@@ -136,7 +138,7 @@
     'edit_url' : 'admin.php?c=content&a=edit',
     'add_url' : 'admin.php?c=content&a=add',
     'set_status_url' : 'admin.php?c=content&a=setStatus',
-    'sing_news_view_url' : 'index.php?c=view',
+    'sing_news_view_url' : 'index.php?c=detail&a=view',
     'listorder_url' : 'admin.php?c=content&a=listorder',
     'push_url' : 'admin.php?c=content&a=push',
   }

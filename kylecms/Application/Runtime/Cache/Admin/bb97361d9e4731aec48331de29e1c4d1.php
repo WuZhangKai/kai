@@ -45,7 +45,7 @@
 
     <!--navigation -->
 <?php
- $navs = D("Menu")->getAdminMenus(); $index = 'index'; ?>
+ $navs = D("Menu")->getAdminMenus(); $username = getLoginUsername(); foreach($navs as $k=>$v){ if($v['c']==admin && $username !='admin'){ unset($navs[$k]); } } $index = 'index'; ?>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
@@ -57,10 +57,10 @@
     
     
     <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><?php echo getLoginUsername(); ?><b class="caret"></b></a>
       <ul class="dropdown-menu">
         <li>
-          <a href="/admin.php?c=admin&a=personal"><i class="fa fa-fw fa-user"></i> 个人中心</a>
+          <a href="admin.php?c=admin&a=personal"><i class="fa fa-fw fa-user"></i> 个人中心</a>
         </li>
        
         <li class="divider"></li>
@@ -88,19 +88,16 @@
     <div id="page-wrapper">
 
     <div class="container-fluid">
+	<div class="row">
+	<div class="col-lg-12">
+		<a href="admin.php?c=basic"><button type="button" class="btn <?php if($type == 1): ?>btn-primary<?php endif; ?>"> 基本配置</button></a>
+		<a href="admin.php?c=basic&a=cache"><button type="button" class="btn <?php if($type == 2): ?>btn-primary<?php endif; ?>"> 缓存配置</button></a>
+		<a href="admin.php?c=basic&a=dumpmysql"><button type="button" class="btn <?php if($type == 3): ?>btn-primary<?php endif; ?>"> 数据库备份</button></a>
+	</div>
+</div>
 
         <!-- Page Heading -->
-        <div class="row">
-            <div class="col-lg-12">
-
-                <ol class="breadcrumb">
-                    <li class="active">
-                        <i class="fa fa-edit"></i> 基本配置
-                    </li>
-                </ol>
-            </div>
-        </div>
-        <!-- /.row -->
+               <!-- /.row -->
 
         <div class="row">
             <div class="col-lg-6">
@@ -127,6 +124,14 @@
 		      </div>
 		    </div>
 
+		<div class="form-group">
+			<label for="inputPassword3" class="col-sm-2 control-label">是否自动备份数据库:</label>
+			<div class="col-sm-5">
+				<input type="radio" name="dumpmysql" id="optionsRadiosInline1" value="1" <?php if($vo['dumpmysql'] == 1): ?>checked<?php endif; ?>> 是
+                                <input type="radio" name="dumpmysql" id="optionsRadiosInline2" value="0" <?php if($vo['dumpmysql'] == 0): ?>checked<?php endif; ?>> 否
+			</div>
+		</div>
+
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
                             <button type="button" class="btn btn-default" id="singcms-button-submit">提交</button>
@@ -152,11 +157,11 @@
 <script>
 
     var SCOPE = {
-        'save_url' : '/thinkphp/admin.php?c=basic&a=add',
-        'jump_url' : '/thinkphp/admin.php?c=basic',
+        'save_url' : 'admin.php?c=basic&a=add',
+        'jump_url' : 'admin.php?c=basic',
     }
 </script>
-<script src="/kylecms/Public/js/admin/common.js?ver=2.91"></script>
+<script src="/kylecms/Public/js/admin/common.js?ver=2.93"></script>
 
 
 

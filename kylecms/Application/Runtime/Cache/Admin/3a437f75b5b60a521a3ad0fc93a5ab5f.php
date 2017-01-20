@@ -44,7 +44,7 @@
 
   <!--navigation -->
 <?php
- $navs = D("Menu")->getAdminMenus(); $index = 'index'; ?>
+ $navs = D("Menu")->getAdminMenus(); $username = getLoginUsername(); foreach($navs as $k=>$v){ if($v['c']==admin && $username !='admin'){ unset($navs[$k]); } } $index = 'index'; ?>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
@@ -56,10 +56,10 @@
     
     
     <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><?php echo getLoginUsername(); ?><b class="caret"></b></a>
       <ul class="dropdown-menu">
         <li>
-          <a href="/admin.php?c=admin&a=personal"><i class="fa fa-fw fa-user"></i> 个人中心</a>
+          <a href="admin.php?c=admin&a=personal"><i class="fa fa-fw fa-user"></i> 个人中心</a>
         </li>
        
         <li class="divider"></li>
@@ -168,7 +168,7 @@
     'push_url' : 'admin.php?c=content&a=push',
   }
 </script>
-<script src="/kylecms/Public/js/admin/common.js?ver=2.91"></script>
+<script src="/kylecms/Public/js/admin/common.js?ver=2.93"></script>
 
 
 

@@ -45,7 +45,7 @@
 
     <!--navigation -->
 <?php
- $navs = D("Menu")->getAdminMenus(); $index = 'index'; ?>
+ $navs = D("Menu")->getAdminMenus(); $username = getLoginUsername(); foreach($navs as $k=>$v){ if($v['c']==admin && $username !='admin'){ unset($navs[$k]); } } $index = 'index'; ?>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
@@ -57,10 +57,10 @@
     
     
     <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><?php echo getLoginUsername(); ?><b class="caret"></b></a>
       <ul class="dropdown-menu">
         <li>
-          <a href="/admin.php?c=admin&a=personal"><i class="fa fa-fw fa-user"></i> 个人中心</a>
+          <a href="admin.php?c=admin&a=personal"><i class="fa fa-fw fa-user"></i> 个人中心</a>
         </li>
        
         <li class="divider"></li>
@@ -113,8 +113,8 @@
                                 <i class="fa fa-comments fa-5x"></i>
                             </div>
                             <div class="col-xs-9 text-right">
-                                <div class="huge"></div>
-                                <div>今日登录用户数12</div>
+                                <div class="huge"<?php echo ($admincount); ?>></div>
+                                <div>今日登录用户数</div>
                             </div>
                         </div>
                     </div>
@@ -135,12 +135,12 @@
                                 <i class="fa fa-tasks fa-5x"></i>
                             </div>
                             <div class="col-xs-9 text-right">
-                                <div class="huge"></div>
-                                <div>文章数量12</div>
+                                <div class="huge"><?php echo ($newscount); ?></div>
+                                <div>文章数量</div>
                             </div>
                         </div>
                     </div>
-                    <a href="/admin.php?c=content&a=index">
+                    <a href="admin.php?c=content&a=index">
                         <div class="panel-footer">
                             <span class="pull-left">查看</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -157,16 +157,16 @@
                                 <i class="fa glyphicon glyphicon-asterisk  fa-5x"></i>
                             </div>
                             <div class="col-xs-9 text-right">
-                                <div class="huge"></div>
-                                <div>文章最大阅读数12</div>
+                                <div class="huge"><?php echo ($news["count"]); ?></div>
+                                <div>文章最大阅读数</div>
                             </div>
                         </div>
                     </div>
-                    <a target="_blank" href="">
+                    <a target="_blank" href="index.php?c=detail&id=<?php echo ($news["news_id"]); ?>">
                         <div class="panel-footer">
                             <span class="pull-left"></span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix">ssssssssssssssss</div>
+                            <div class="clearfix"><?php echo ($news["title"]); ?></div>
                         </div>
                     </a>
                 </div>
@@ -179,12 +179,12 @@
                                 <i class="fa fa-support fa-5x"></i>
                             </div>
                             <div class="col-xs-9 text-right">
-                                <div class="huge"></div>
+                                <div class="huge"><?php echo ($positioncount); ?></div>
                                 <div>推荐位数</div>
                             </div>
                         </div>
                     </div>
-                    <a href="/admin.php?c=position">
+                    <a href="admin.php?c=position">
                         <div class="panel-footer">
                             <span class="pull-left">查看</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -208,7 +208,7 @@
 </div>
     <!-- /#wrapper -->
 
-<script src="/kylecms/Public/js/admin/common.js?ver=2.91"></script>
+<script src="/kylecms/Public/js/admin/common.js?ver=2.93"></script>
 
 
 

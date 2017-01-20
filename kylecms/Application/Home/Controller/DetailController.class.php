@@ -31,6 +31,14 @@ class DetailController extends CommonController{
 			'news' => $news,
 		));
 
-		$this->display();
+		$this->display("Detail/index");
 	}
+
+	public function view(){
+		if(!getLoginUsername()){
+			$this->error("你更没有权限访问该页面");
+		}
+		$this->index();
+	}
+	
 }

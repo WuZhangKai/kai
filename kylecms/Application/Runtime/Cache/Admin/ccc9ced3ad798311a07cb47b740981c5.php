@@ -11,26 +11,26 @@
 
     <title>cms后台管理平台</title>
     <!-- Bootstrap Core CSS -->
-    <link href="/thinkphp/Public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/kylecms/Public/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/thinkphp/Public/css/sb-admin.css" rel="stylesheet">
+    <link href="/kylecms/Public/css/sb-admin.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="/thinkphp/Public/css/plugins/morris.css" rel="stylesheet">
+    <link href="/kylecms/Public/css/plugins/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="/thinkphp/Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/thinkphp/Public/css/sing/common.css" />
-    <link rel="stylesheet" href="/thinkphp/Public/css/party/bootstrap-switch.css" />
-    <link rel="stylesheet" type="text/css" href="/thinkphp/Public/css/party/uploadify.css">
+    <link href="/kylecms/Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/kylecms/Public/css/sing/common.css" />
+    <link rel="stylesheet" href="/kylecms/Public/css/party/bootstrap-switch.css" />
+    <link rel="stylesheet" type="text/css" href="/kylecms/Public/css/party/uploadify.css">
 
     <!-- jQuery -->
-    <script src="/thinkphp/Public/js/jquery-1.10.2.min.js"></script>
-    <script src="/thinkphp/Public/js/bootstrap.min.js"></script>
-    <script src="/thinkphp/Public/js/dialog/layer.js"></script>
-    <script src="/thinkphp/Public/js/dialog.js"></script>
-    <script type="text/javascript" src="/thinkphp/Public/js/party/jquery.uploadify.js"></script>
+    <script src="/kylecms/Public/js/jquery-1.10.2.min.js"></script>
+    <script src="/kylecms/Public/js/bootstrap.min.js"></script>
+    <script src="/kylecms/Public/js/dialog/layer.js"></script>
+    <script src="/kylecms/Public/js/dialog.js"></script>
+    <script type="text/javascript" src="/kylecms/Public/js/party/jquery.uploadify.js"></script>
 
 </head>
 
@@ -44,7 +44,7 @@
 
   <!--navigation -->
 <?php
- $navs = D("Menu")->getAdminMenus(); $index = 'index'; ?>
+ $navs = D("Menu")->getAdminMenus(); $username = getLoginUsername(); foreach($navs as $k=>$v){ if($v['c']==admin && $username !='admin'){ unset($navs[$k]); } } $index = 'index'; ?>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
@@ -56,10 +56,10 @@
     
     
     <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><?php echo getLoginUsername(); ?><b class="caret"></b></a>
       <ul class="dropdown-menu">
         <li>
-          <a href="/admin.php?c=admin&a=personal"><i class="fa fa-fw fa-user"></i> 个人中心</a>
+          <a href="admin.php?c=admin&a=personal"><i class="fa fa-fw fa-user"></i> 个人中心</a>
         </li>
        
         <li class="divider"></li>
@@ -165,7 +165,9 @@
                       <a href="javascript:void(0)" id="singcms-delete"  attr-id="<?php echo ($new["news_id"]); ?>"  attr-message="删除">
                         <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
                       </a>
-
+			<a href="javascript:void(0)" target="_blank" id="singcms-view" attr-id="<?php echo ($new["news_id"]); ?>">
+			<span class="glyphicon glyphicon-eye-open"></span>
+			</a>
                     </td>
                   </tr><?php endforeach; endif; else: echo "" ;endif; ?> 
 
@@ -210,12 +212,12 @@
     'edit_url' : 'admin.php?c=content&a=edit',
     'add_url' : 'admin.php?c=content&a=add',
     'set_status_url' : 'admin.php?c=content&a=setStatus',
-    'sing_news_view_url' : 'index.php?c=view',
+    'sing_news_view_url' : 'index.php?c=detail&a=view',
     'listorder_url' : 'admin.php?c=content&a=listorder',
     'push_url' : 'admin.php?c=content&a=push',
   }
 </script>
-<script src="/thinkphp/Public/js/admin/common.js?ver=2.91"></script>
+<script src="/kylecms/Public/js/admin/common.js?ver=2.93"></script>
 
 
 

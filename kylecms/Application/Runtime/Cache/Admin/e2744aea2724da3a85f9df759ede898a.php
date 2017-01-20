@@ -9,28 +9,28 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>sing后台管理平台</title>
+    <title>cms后台管理平台</title>
     <!-- Bootstrap Core CSS -->
-    <link href="/thinkphp/Public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/kylecms/Public/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/thinkphp/Public/css/sb-admin.css" rel="stylesheet">
+    <link href="/kylecms/Public/css/sb-admin.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="/thinkphp/Public/css/plugins/morris.css" rel="stylesheet">
+    <link href="/kylecms/Public/css/plugins/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="/thinkphp/Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/thinkphp/Public/css/sing/common.css" />
-    <link rel="stylesheet" href="/thinkphp/Public/css/party/bootstrap-switch.css" />
-    <link rel="stylesheet" type="text/css" href="/thinkphp/Public/css/party/uploadify.css">
+    <link href="/kylecms/Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/kylecms/Public/css/sing/common.css" />
+    <link rel="stylesheet" href="/kylecms/Public/css/party/bootstrap-switch.css" />
+    <link rel="stylesheet" type="text/css" href="/kylecms/Public/css/party/uploadify.css">
 
     <!-- jQuery -->
-    <script src="/thinkphp/Public/js/jquery-1.10.2.min.js"></script>
-    <script src="/thinkphp/Public/js/bootstrap.min.js"></script>
-    <script src="/thinkphp/Public/js/dialog/layer.js"></script>
-    <script src="/thinkphp/Public/js/dialog.js"></script>
-    <script type="text/javascript" src="/thinkphp/Public/js/party/jquery.uploadify.js"></script>
+    <script src="/kylecms/Public/js/jquery-1.10.2.min.js"></script>
+    <script src="/kylecms/Public/js/bootstrap.min.js"></script>
+    <script src="/kylecms/Public/js/dialog/layer.js"></script>
+    <script src="/kylecms/Public/js/dialog.js"></script>
+    <script type="text/javascript" src="/kylecms/Public/js/party/jquery.uploadify.js"></script>
 
 </head>
 
@@ -49,7 +49,7 @@
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     
-    <a class="navbar-brand" >singcms内容管理平台</a>
+    <a class="navbar-brand" >kylecms内容管理平台</a>
   </div>
   <!-- Top Menu Items -->
   <ul class="nav navbar-right top-nav">
@@ -83,7 +83,7 @@
   <!-- /.navbar-collapse -->
 </nav>
 
-  <script src="/thinkphp/Public/js/kindeditor/kindeditor-all.js"></script>
+  <script src="/kylecms/Public/js/kindeditor/kindeditor-all.js"></script>
   <div id="page-wrapper">
 
     <div class="container-fluid">
@@ -200,12 +200,12 @@
     'save_url' : 'admin.php?c=content&a=add',
     'jump_url' : 'admin.php?c=content',
     'ajax_upload_image_url' : 'admin.php?c=image&a=ajaxuploadimage',
-    'ajax_upload_swf' : '/thinkphp/Public/js/party/uploadify.swf',
+    'ajax_upload_swf' : '/kylecms/Public/js/party/uploadify.swf',
   };
 
 </script>
 <!-- /#wrapper -->
-<script src="/thinkphp/Public/js/admin/image.js?ver=2.2"></script>
+<script src="/kylecms/Public/js/admin/image.js?ver=2.2"></script>
 <script>
   // 6.2
   KindEditor.ready(function(K) {
@@ -215,7 +215,7 @@
     });
   });
 </script>
-<script src="/thinkphp/Public/js/admin/common.js?ver=2.91"></script>
+<script src="/kylecms/Public/js/admin/common.js?ver=2.91"></script>
 
 
 

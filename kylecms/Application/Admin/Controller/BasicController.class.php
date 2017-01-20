@@ -15,6 +15,7 @@ class BasicController extends CommonController{
 	public function index(){
 		$res = D("Basic")->select();	
 		$this->assign('vo',$res);
+		$this->assign('type',1);
 		$this->display();
 	}
 
@@ -37,4 +38,14 @@ class BasicController extends CommonController{
 			return show(0,'没有提价的数据');
 		}
 	}
+
+	public function cache(){
+		$this->assign('type',2);
+		$this->display();
+	}
+
+	 public function dumpmysql(){
+		$this->assign('type',3);
+		$this->display();
+        }
 }

@@ -36,6 +36,12 @@ $('.singcms-table #singcms-edit').on('click',function(){
 	window.location.href = url;
 });
 
+$('.singcms-table #singcms-view').on('click',function(){
+	var id = $(this).attr('attr-id');
+	var url = SCOPE.sing_news_view_url + '&id='+id;
+	window.open(url);
+});
+
 /**
  * 删除操作JS
  */
@@ -44,7 +50,7 @@ $('.singcms-table #singcms-delete').on('click',function(){
 	var a = $(this).attr("attr-a");
 	var message = $(this).attr("attr-message");
 	var url = SCOPE.set_status_url;
-	alert(url);
+
 	data = {};
 	data['id'] = id
 	data['status'] = -1;

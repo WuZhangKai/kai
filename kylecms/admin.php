@@ -23,6 +23,8 @@ $_GET['a'] = (!isset($_GET['a']) || !$_GET['a']) ? 'index' : $_GET['a'];
 
 // 定义应用目录
 define('APP_PATH','./Application/');
+$dir = dirname(__FILE__);
+define('HTML_PATH',$dir.'/');
 
 // 引入ThinkPHP入口文件
 require './ThinkPHP/ThinkPHP.php';

@@ -51,7 +51,7 @@
 		<?php echo ($vo["description"]); ?>
             </dd>
             <dd class="news-info">
-              <?php echo ($vo["keywords"]); ?> <span><?php echo (date("Y-m-d H:i:s",$vo["create_time"])); ?></span> 阅读(0)
+              <?php echo ($vo["keywords"]); ?> <span><?php echo (date("Y-m-d H:i:s",$vo["create_time"])); ?></span> 阅读(<i news-id="<?php echo ($vo["news_id"]); ?>" class="news_count node-<?php echo ($vo["news_id"]); ?>"><?php echo ($vo["count"]); ?></i>)
             </dd>
           </dl><?php endforeach; endif; else: echo "" ;endif; ?>
         </div>
@@ -81,4 +81,6 @@
   </div>
 </section>
 </body>
+<script src="/kylecms/Public/js/jquery-1.10.2.min.js"></script>
+<script src="/kylecms/Public/js/count.js"></script>
 </html>

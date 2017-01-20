@@ -1,0 +1,440 @@
+[ 2017-01-17T11:26:03+08:00 ] 192.168.1.116 /kylecms/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001738s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001134s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/kylecms/Application/Home/Controller/CommonController.class.php 第 21 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/NewsModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0122s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  [ RunTime:0.0020s ]
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 61 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0033s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 4 ORDER BY listorder desc ,id desc LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc ,id desc LIMIT 3   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/NewsModel.class.php 第 101 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' ORDER BY listorder desc ,news_id desc LIMIT 30   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 9 ORDER BY listorder desc ,id desc LIMIT 30   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) /var/www/html/kylecms/Application/Common/Model/BasicModel.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /var/www/html/kylecms/Application/Common/Model/BasicModel.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/MenuModel.class.php 第 90 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: news_idg /var/www/html/kylecms/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 35 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044679s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044771s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000676s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001371s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001468s ]
+
+[ 2017-01-17T11:26:10+08:00 ] 192.168.1.116 /kylecms/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/kylecms/Application/Home/Controller/CommonController.class.php 第 21 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/NewsModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  [ RunTime:0.0003s ]
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 61 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 4 ORDER BY listorder desc ,id desc LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc ,id desc LIMIT 3   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/NewsModel.class.php 第 101 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' ORDER BY listorder desc ,news_id desc LIMIT 30   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 9 ORDER BY listorder desc ,id desc LIMIT 30   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) /var/www/html/kylecms/Application/Common/Model/BasicModel.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /var/www/html/kylecms/Application/Common/Model/BasicModel.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/MenuModel.class.php 第 90 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: news_idg /var/www/html/kylecms/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 35 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033306s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033349s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000194s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001177s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001291s ]
+
+[ 2017-01-17T11:26:41+08:00 ] 192.168.1.116 /kylecms/index.php?c=cat&id=9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000687s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/kylecms/Application/Home/Controller/CommonController.class.php 第 21 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/MenuModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_menu` WHERE ( menu_id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 61 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 9 ORDER BY listorder desc ,id desc LIMIT 5   [ RunTime:0.0006s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/NewsModel.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: page /var/www/html/kylecms/Application/Home/Controller/CatController.class.php 第 24 行.
+NOTIC: [8] Undefined variable: pageSize /var/www/html/kylecms/Application/Home/Controller/CatController.class.php 第 24 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' AND `catid` = 9 ORDER BY listorder desc,news_id desc  [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' AND `catid` = 9 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: pageSize /var/www/html/kylecms/Application/Home/Controller/CatController.class.php 第 27 行.
+NOTIC: [2] Division by zero /var/www/html/kylecms/ThinkPHP/Library/Think/Page.class.php 第 84 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) /var/www/html/kylecms/Application/Common/Model/BasicModel.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /var/www/html/kylecms/Application/Common/Model/BasicModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0004s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013108s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013152s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000208s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000450s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000493s ]
+
+[ 2017-01-17T11:26:42+08:00 ] 192.168.1.116 /kylecms/index.php?c=cat&id=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000506s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001414s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/kylecms/Application/Home/Controller/CommonController.class.php 第 21 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/MenuModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `cms_menu` WHERE ( menu_id=7 ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 61 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 9 ORDER BY listorder desc ,id desc LIMIT 5   [ RunTime:0.0011s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/NewsModel.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: page /var/www/html/kylecms/Application/Home/Controller/CatController.class.php 第 24 行.
+NOTIC: [8] Undefined variable: pageSize /var/www/html/kylecms/Application/Home/Controller/CatController.class.php 第 24 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' AND `catid` = 7 ORDER BY listorder desc,news_id desc  [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' AND `catid` = 7 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: pageSize /var/www/html/kylecms/Application/Home/Controller/CatController.class.php 第 27 行.
+NOTIC: [2] Division by zero /var/www/html/kylecms/ThinkPHP/Library/Think/Page.class.php 第 84 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) /var/www/html/kylecms/Application/Common/Model/BasicModel.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /var/www/html/kylecms/Application/Common/Model/BasicModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0009s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014564s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014785s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000302s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000593s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000631s ]
+
+[ 2017-01-17T11:26:43+08:00 ] 192.168.1.116 /kylecms/index.php?c=cat&id=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000669s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/kylecms/Application/Home/Controller/CommonController.class.php 第 21 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/MenuModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `cms_menu` WHERE ( menu_id=6 ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 61 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 9 ORDER BY listorder desc ,id desc LIMIT 5   [ RunTime:0.0006s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/NewsModel.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined variable: page /var/www/html/kylecms/Application/Home/Controller/CatController.class.php 第 24 行.
+NOTIC: [8] Undefined variable: pageSize /var/www/html/kylecms/Application/Home/Controller/CatController.class.php 第 24 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' AND `catid` = 6 ORDER BY listorder desc,news_id desc  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' AND `catid` = 6 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: pageSize /var/www/html/kylecms/Application/Home/Controller/CatController.class.php 第 27 行.
+NOTIC: [2] Division by zero /var/www/html/kylecms/ThinkPHP/Library/Think/Page.class.php 第 84 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000221s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) /var/www/html/kylecms/Application/Common/Model/BasicModel.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /var/www/html/kylecms/Application/Common/Model/BasicModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017091s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017144s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000577s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000661s ]
+
+[ 2017-01-17T11:26:44+08:00 ] 192.168.1.116 /kylecms/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000728s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/kylecms/Application/Home/Controller/CommonController.class.php 第 21 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/NewsModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  [ RunTime:0.0003s ]
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 61 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 4 ORDER BY listorder desc ,id desc LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc ,id desc LIMIT 3   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/NewsModel.class.php 第 101 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' ORDER BY listorder desc ,news_id desc LIMIT 30   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 9 ORDER BY listorder desc ,id desc LIMIT 30   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) /var/www/html/kylecms/Application/Common/Model/BasicModel.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /var/www/html/kylecms/Application/Common/Model/BasicModel.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/MenuModel.class.php 第 90 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: news_idg /var/www/html/kylecms/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 35 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016544s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016595s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000210s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000540s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000594s ]
+
+[ 2017-01-17T11:31:46+08:00 ] 192.168.1.116 /kylecms/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000629s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000681s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/kylecms/Application/Home/Controller/CommonController.class.php 第 21 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/NewsModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  [ RunTime:0.0006s ]
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 61 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 4 ORDER BY listorder desc ,id desc LIMIT 1   [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc ,id desc LIMIT 3   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/NewsModel.class.php 第 101 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' ORDER BY listorder desc ,news_id desc LIMIT 30   [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 9 ORDER BY listorder desc ,id desc LIMIT 30   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) /var/www/html/kylecms/Application/Common/Model/BasicModel.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /var/www/html/kylecms/Application/Common/Model/BasicModel.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/MenuModel.class.php 第 90 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: news_idg /var/www/html/kylecms/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 35 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028042s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028107s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000180s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000215s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000509s ]
+
+[ 2017-01-17T11:46:23+08:00 ] 192.168.1.116 /kylecms/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000567s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000884s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000939s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/kylecms/Application/Home/Controller/CommonController.class.php 第 21 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/NewsModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  [ RunTime:0.0004s ]
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 61 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 4 ORDER BY listorder desc ,id desc LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc ,id desc LIMIT 3   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/NewsModel.class.php 第 101 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' ORDER BY listorder desc ,news_id desc LIMIT 30   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 9 ORDER BY listorder desc ,id desc LIMIT 30   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000202s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) /var/www/html/kylecms/Application/Common/Model/BasicModel.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /var/www/html/kylecms/Application/Common/Model/BasicModel.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/MenuModel.class.php 第 90 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0091s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: news_idg /var/www/html/kylecms/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 35 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030773s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031065s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000689s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000752s ]
+
+[ 2017-01-17T11:46:25+08:00 ] 192.168.1.116 /kylecms/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.017796s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017910s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/kylecms/Application/Home/Controller/CommonController.class.php 第 21 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/NewsModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  [ RunTime:0.0004s ]
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 61 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 4 ORDER BY listorder desc ,id desc LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc ,id desc LIMIT 3   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/NewsModel.class.php 第 101 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' ORDER BY listorder desc ,news_id desc LIMIT 30   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 9 ORDER BY listorder desc ,id desc LIMIT 30   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) /var/www/html/kylecms/Application/Common/Model/BasicModel.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /var/www/html/kylecms/Application/Common/Model/BasicModel.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/MenuModel.class.php 第 90 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: news_idg /var/www/html/kylecms/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 35 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028673s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028746s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000179s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000521s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000579s ]
+
+[ 2017-01-17T11:46:35+08:00 ] 192.168.1.116 /kylecms/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000445s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/kylecms/Application/Home/Controller/CommonController.class.php 第 21 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/NewsModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  [ RunTime:0.0004s ]
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 61 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 4 ORDER BY listorder desc ,id desc LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc ,id desc LIMIT 3   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/NewsModel.class.php 第 101 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' ORDER BY listorder desc ,news_id desc LIMIT 30   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 9 ORDER BY listorder desc ,id desc LIMIT 30   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) /var/www/html/kylecms/Application/Common/Model/BasicModel.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /var/www/html/kylecms/Application/Common/Model/BasicModel.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/MenuModel.class.php 第 90 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: news_idg /var/www/html/kylecms/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 35 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021928s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021971s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000656s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000909s ]
+
+[ 2017-01-17T11:46:37+08:00 ] 192.168.1.116 /kylecms/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/kylecms/Application/Home/Controller/CommonController.class.php 第 21 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/NewsModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  [ RunTime:0.0012s ]
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 61 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 4 ORDER BY listorder desc ,id desc LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc ,id desc LIMIT 3   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/NewsModel.class.php 第 101 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' ORDER BY listorder desc ,news_id desc LIMIT 30   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: title /var/www/html/kylecms/Application/Common/Model/PositionContentModel.class.php 第 14 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 9 ORDER BY listorder desc ,id desc LIMIT 30   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) /var/www/html/kylecms/Application/Common/Model/BasicModel.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /var/www/html/kylecms/Application/Common/Model/BasicModel.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) /var/www/html/kylecms/Application/Common/Model/MenuModel.class.php 第 90 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0015s ]
+NOTIC: [8] Undefined index: news_idg /var/www/html/kylecms/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 35 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027863s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027907s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000183s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000218s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000788s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000926s ]
+

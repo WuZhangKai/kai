@@ -23,8 +23,7 @@ class UploadImageModel extends Model {
         $res = $this->_uploadObj->upload();
 
         if($res) {
-            return '/thinkphp/' .self::UPLOAD . '/' . $res['imgFile']['savepath'] . $res['imgFile']['savename'];
-        }else{
+            return __ROOT__.'/'.self::UPLOAD . '/' . $res['imgFile']['savepath'] . $res['imgFile']['savename'];
             return false;
         }
     }
@@ -32,7 +31,7 @@ class UploadImageModel extends Model {
     public function imageUpload() {
         $res = $this->_uploadObj->upload();
        if($res) {
-           return '/thinkphp/' .self::UPLOAD . '/' . $res['file']['savepath'] . $res['file']['savename'];
+           return __ROOT__.'/'.self::UPLOAD . '/' . $res['file']['savepath'] . $res['file']['savename'];
        }else{
            return false;
        }

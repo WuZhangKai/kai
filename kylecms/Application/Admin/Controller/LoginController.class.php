@@ -27,7 +27,7 @@ class LoginController extends Controller {
 	
 		
 		$ret =	D('Admin')->getAdminByUsername($username);
-		if(!$ret){
+		if(!$ret || $ret['status']!=1){
 			return show(0,'改用户不存在');
 		}
 
@@ -35,7 +35,7 @@ class LoginController extends Controller {
 
 			return show(0,'密码错误');
 		}
-		
+		D("Admin")->updateByAdminId($ret['admin_id'],array('lastlogintime'=>time()));	
 		session('adminUser',$ret);
 		return show(1,'登录成功');
 		
